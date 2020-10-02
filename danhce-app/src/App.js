@@ -1,9 +1,13 @@
 import React,{Component} from 'react';
-
+import Life from "./pages/demo/Life"
 class App extends Component {
   render(){
     return (
-      <div>你好</div>
+      <div>
+        nihao
+        <Life></Life>
+      </div>
+     
     )
   }
 }
