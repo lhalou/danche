@@ -1,11 +1,10 @@
 import React,{Component} from 'react';
-import Life from "./pages/demo/Life"
+import Admin from './admin'
 class App extends Component {
   render(){
     return (
       <div>
-        nihao
-        <Life></Life>
+        <Admin></Admin>
       </div>
      
     )

@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import './index.less'
-import {Button} from 'antd'
+import {Button,Input} from 'antd'
 
 class Child extends Component {
   constructor(props){
@@ -12,6 +12,7 @@ class Child extends Component {
         <p>这是子组件</p>
         <p>{this.props.count}</p>
         <Button>按钮</Button>
+        <Input></Input>
       </div>
     )
   }
