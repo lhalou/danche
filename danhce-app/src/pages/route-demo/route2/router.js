@@ -9,9 +9,9 @@ class MyRouter extends Component {
     return (
       <HashRouter>
         <Home>
-          <Route path = '/' render = {() => 
+          <Route path = '/main' render = {() => 
             <Main>
-              <Route path = '/a' component = {About}></Route>
+              <Route path = '/main/:value' component = {About}></Route>
             </Main>
           }></Route>
           <Route path = '/about' component = {About}></Route>

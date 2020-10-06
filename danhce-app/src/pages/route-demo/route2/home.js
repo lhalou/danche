@@ -8,7 +8,7 @@ class Home extends Component {
         <div>
           <ul>
             <li>
-              <Link to = "/">Home111</Link>
+              <Link to = "/main">Home111</Link>
             </li>
             <li>
               <Link to = "/about">about111</Link>
