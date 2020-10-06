@@ -1,4 +1,5 @@
 .header {
+  background: #fff;
   .header-top {
     height: 60px;
     line-height: 60px;
@@ -14,6 +15,16 @@
     line-height: 40px;
     .breadcrumb-title {
       text-align: center;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 75px;
+        top: 39px;
+        border-top: 9px solid #fff;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        z-index: 10;
+      }
     }
     .weather {
       padding: 0 20px;

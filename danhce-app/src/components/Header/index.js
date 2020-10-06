@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import { Row, Col } from 'antd'
 import './index.less'
 import util from './../../utils/utils'
+import Axios from './../../axios/axios'
 class Header extends Component {
   constructor(props){
     super(props)
@@ -14,8 +15,21 @@ class Header extends Component {
         mysDate:  util.formateDate(new Date().getTime())
       })
     },1000)
+    this.getWeatherAPIData()
   }
-
+  getWeatherAPIData(){
+    let city = '北京'
+    Axios.jsonp({
+      url: 'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=a8AQAyolkO1gQNloeMPlI0wKxQWe542V'
+    }).then((res) => {
+      if(res.status === 'success'){
+        let data = res.results[0].weather_data[0]
+        this.setState({
+          weather: data.weather
+        })
+      }
+    })
+  }
   
   render(){
     return (
@@ -32,7 +46,7 @@ class Header extends Component {
           </Col>
           <Col className = 'weather' span = {20}>
             <span className = 'date'>{this.state.mysDate}</span>
-            <span className = 'weather-detail'>多云转晴</span>
+            <span className = 'weather-detail'>{this.state.weather}多云</span>
           </Col>
         </Row>
       </div>
