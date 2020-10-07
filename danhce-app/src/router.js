@@ -6,6 +6,7 @@ import Admin from './admin'
 import Buttons from './pages/ui/buttons/index'
 import Modals from './pages/ui/modals'
 import SPin from './pages/ui/spin'
+import Notify from './pages/ui/notification'
 import NoMatch from './pages/nomatch/index'
 
 class MyRouter extends Component {
@@ -20,6 +21,7 @@ class MyRouter extends Component {
                 <Route path = '/admin/ui/buttons' component = {Buttons}/>
                 <Route path = '/admin/ui/modals' component = {Modals}/>
                 <Route path = '/admin/ui/loadings' component = {SPin}/>
+                <Route path = '/admin/ui/notification' component = {Notify}/>
                 <Route component = {NoMatch}/>
               </Switch>
             </Admin>
