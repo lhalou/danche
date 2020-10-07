@@ -9,10 +9,10 @@ class Admin extends Component {
   render(){
     return (
       <Row className = 'container'>
-        <Col span = {4} className = 'navleft'>
+        <Col span = {4} className = 'navleft' >
           <NavLeft/>
         </Col>
-        <Col span = {20} className = 'mian' style = {{background: '#aaa'}}>
+        <Col span = {20} className = 'mian' style = {{background: '#aaa',overflow: 'auto !important'}}>
           <Header />
           <Row className = 'content'>
             {/* <Home></Home> */}

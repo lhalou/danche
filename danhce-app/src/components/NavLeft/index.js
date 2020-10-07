@@ -37,7 +37,7 @@ class NavLeft extends Component {
   }
   render(){
     return (
-      <div> 
+      <div style = {{background: '#002140',overflow: 'hidden'}}> 
         <div className = 'logo'>
           <img src = '/assets/logo-mas.png' alt = ''/>
           <h1> danche MS</h1>
