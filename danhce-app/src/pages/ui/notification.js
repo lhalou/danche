@@ -3,6 +3,7 @@ import {Card, notification, Button} from 'antd'
 class Notify extends Component {
   handleOpenNoticfy = (type,direction)=> {
     if(direction){
+      // notification.config()局配置方法，在调用前提前配置，全局一次生效.
       notification.config({
         placement: direction
       })
