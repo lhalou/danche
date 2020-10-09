@@ -10,6 +10,7 @@ import Notify from './pages/ui/notification'
 import NoMatch from './pages/nomatch/index'
 import Messages from './pages/ui/message'
 import Tab from './pages/ui/tabs'
+import Gallery from './pages/ui/gallery'
 class MyRouter extends Component {
   render(){
     return (
@@ -25,6 +26,7 @@ class MyRouter extends Component {
                 <Route path = '/admin/ui/notification' component = {Notify}/>
                 <Route path = '/admin/ui/messages' component = {Messages}/>
                 <Route path = '/admin/ui/tabs' component = {Tab}/>
+                <Route path = '/admin/ui/gallery' component = {Gallery}/>
                 <Route component = {NoMatch}/>
               </Switch>
             </Admin>
