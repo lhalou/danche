@@ -2,17 +2,15 @@ import React, { Component } from 'react'
 import { AppleOutlined, AndroidOutlined, CaretRightOutlined  } from '@ant-design/icons';
 import { Card, message, Tabs} from 'antd'
 const { TabPane } = Tabs;
+const initialPanes = [
+  { title: 'Tab 1', content: 'Content of Tab 1', key: '1' },
+  { title: 'Tab 2', content: 'Content of Tab 2', key: '2' },
+];
 class Tab extends Component {
-   constructor(props) {
-    super(props);
-    const panes = [
-      { title: 'Tab 1', content: 'Content of Tab Pane 1', key: '1' },
-      { title: 'Tab 2', content: 'Content of Tab Pane 2', key: '2' },
-    ];
-    this.state = {
-      panes,
-    };
-  }
+   state = {
+    panes: initialPanes,
+  };
+
   
   
   handleCallBack = (key) => {
@@ -62,12 +60,15 @@ class Tab extends Component {
             </TabPane>
           </Tabs>
         </Card>
-        <Card title = '动态tab页'>
-          {this.state.panes.map(pane => (
-            <TabPane tab={pane.title} key={pane.key} >
-              {pane.content}
-            </TabPane>
-          ))}
+        <Card title = '动态tab页' >
+          <Tabs>
+            {this.state.panes.map(pane => (
+              <TabPane tab={pane.title} key={pane.key}>
+                {pane.content}
+              </TabPane>
+            ))}
+          </Tabs>
+          
         </Card>
       </div>
     )
