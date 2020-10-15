@@ -42,7 +42,7 @@ class NavLeft extends Component {
           <img src = '/assets/logo-mas.png' alt = ''/>
           <h1> danche MS</h1>
         </div>
-       <Menu theme = 'dark'>
+       <Menu theme = 'dark' className = 'scroll'>
         {this.state.menuTreeNode}
       </Menu>
       </div>

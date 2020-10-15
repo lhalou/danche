@@ -13,6 +13,7 @@ import Tab from './pages/ui/tabs'
 import Gallery from './pages/ui/gallery'
 import Carousels from './pages/ui/carousel'
 import FormLogin from './pages/form/login'
+import FromRegister from './pages/form/register'
 class MyRouter extends Component {
   render(){
     return (
@@ -31,6 +32,7 @@ class MyRouter extends Component {
                 <Route path = '/admin/ui/gallery' component = {Gallery}/>
                 <Route path = '/admin/ui/carousel' component = {Carousels}/>
                 <Route path = '/admin/form/login' component = {FormLogin}/>
+                <Route path = '/admin/form/reg' component = {FromRegister}/>
                 <Route component = {NoMatch}/>
               </Switch>
             </Admin>
